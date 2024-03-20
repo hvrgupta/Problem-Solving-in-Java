@@ -23,28 +23,33 @@ class TreeNode {
     }
 }
 
+// T.C. - O(N)
+// S.C. - O(N) -> queue full in worst case
+
 public class levelOrderTraversal {
     public static void levelOrder(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
-        List<List<Integer>> wl = new LinkedList<List<Integer>>();
+        List<List<Integer>> list = new LinkedList<List<Integer>>();
+
         if (root == null)
             return;
         q.offer(root);
-
         while (!q.isEmpty()) {
+            // adding the number of element present in that level
             int level = q.size();
-
             List<Integer> subList = new LinkedList<Integer>();
             for (int i = 0; i < level; i++) {
                 if (q.peek().left != null)
                     q.offer(q.peek().left);
                 if (q.peek().right != null)
                     q.offer(q.peek().right);
+
                 subList.add(q.poll().val);
             }
-            wl.add(subList);
+            list.add(subList);
         }
-        System.out.println(wl);
+
+        System.out.println(list);
     }
 
     public static void main(String[] args) {
