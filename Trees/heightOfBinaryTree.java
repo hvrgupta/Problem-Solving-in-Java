@@ -1,4 +1,3 @@
-package Trees;
 
 class heightOfBinaryTree {
     class Node {

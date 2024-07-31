@@ -1,4 +1,3 @@
-package Trees;
 
 public class checkBalancedBT {
     private int helper(TreeNode root) {

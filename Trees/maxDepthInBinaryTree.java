@@ -1,4 +1,4 @@
-public class MaxDepthInBinaryTree {
+public class maxDepthInBinaryTree {
     public int maxDepth(TreeNode root) {
         if (root == null)
             return 0;

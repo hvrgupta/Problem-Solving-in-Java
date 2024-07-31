@@ -1,4 +1,3 @@
-package Trees;
 
 public class diameterOfBinaryTree {
     private int helper(TreeNode root, int[] diameter) {
