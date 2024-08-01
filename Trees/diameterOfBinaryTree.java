@@ -1,4 +1,3 @@
-
 public class diameterOfBinaryTree {
     private int helper(TreeNode root, int[] diameter) {
         if (root == null)
@@ -12,7 +11,7 @@ public class diameterOfBinaryTree {
         return Math.max(left, right) + 1;
     }
 
-    public int diameterOfBinaryTree(TreeNode root) {
+    public int calculateDiameterOfBinaryTree(TreeNode root) {
         // using array to pass element as reference
         int[] diameter = new int[1];
         helper(root, diameter);
